@@ -5,7 +5,8 @@ namespace PII_Game_Of_Life
 
     public class Generador
     {
-        public bool [,] LeerArchivo(string url){
+        public string url;
+        public bool [,] LeerArchivo(){
             string content = File.ReadAllText(url);
             string[] contentLines = content.Split('\n');
             bool[,] board = new bool[contentLines.Length, contentLines[0].Length];
